@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases de CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center">Pseudoclases principales de CSS3</h1>
+            <p>Las Pseudoclases son propiedades CSS que se aplican a los elementos por medio de una palabra clave que
+                especifican un estado especial.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="text-center">:active</h2>
+                <p>La pseudoclase :active especifica cuando un elemento está activo, es decir, cuando está siendo
+                    clicado
+                    por el usuario.</p>
+                <a href="#"><button type="button" class="btn btn-dark active">HOLA</button></a>
+                <br>
+                <br>
+                <p>Podemos evidenciar que cuando presionamos el botón cambian algunas cosas y cuando soltamos el click
+                    vuelve a su estado original, esta modificación se logra gracias a la pseudoclase active.</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-center">:checked</h2>
+                <p>La pseudoclase checked aplica a las etiquetas input de tipo radio y casillas de verificación, con
+                    esta podemos modificar las propiedades de cualquier casilla que el usuario selecione.</p>
+                <input type="checkbox" name="" id="">
+                <br>
+                <input type="checkbox" name="" id="">
+                <br>
+                <input type="radio" name="1" id="1">
+                <br>
+                <input type="radio" name="1" id="1">
+                <br>
+                <br>
+                <p>En este caso, cuando damos click sobre los elementos vemos que estos tienen un desplazamiento horizontal hacia la derecha y cuando lo quitamos vuelven a su posición inicial.</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-center">:default</h2>
+                <p>Permite dar una apariencia diferente a la entrada de tipo radio o checkbox que aparezca marcada por
+                    defecto.</p>
+                <input type="checkbox" name="" id="" checked>
+                <br>
+                <input type="checkbox" name="" id="">
+                <br>
+                <input type="radio" name="" id="">
+                <br>
+                <input type="radio" name="" id="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="text-center">:disabled</h2>
+                <p>Los estilos especificados en este selector se aplicaran a los campos que estén deshabilitados. En
+                    este caso el campo deshabilitado se mostrará de color negro.</p>
+                <input type="text">
+                <br>
+                <br>
+                <input type="text">
+                <br>
+                <br>
+                <input type="text" disabled placeholder="Campo no disponible">
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-center">:empty</h2>
+                <p>Representa cualquier elemento que no tenga hijos. Los hijos pueden ser etiquetas o texto (incluido el
+                    espacio en blanco).</p>
+                <div class="empty"></div>
+                <br>
+                <p>En este caso he creado un contenedor vacío y, a través de la pseudoclase :empty, le he añadido estilos.</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-center">:enabled</h2>
+                <p>Representa cualquier elemento habilitado. Un elemento está habilitado si puede ser activado (es decir,
+                    seleccionado, se puede hacer click en él, acepta que se le introduzca texto, etc.) o si accepta el
+                    foco.</p>
+                <input type="text" placeholder="Campo disponible">
+                <br>
+                <br>
+                <input type="text" placeholder="Campo disponible">
+                <br>
+                <br>
+                <input type="text" disabled placeholder="Campo no disponible">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="text-center">:first-child / :last-child</h2>
+                <p>Representan el primer y último elemento entre un grupo de elementos hermanos, respectivamente.</p>
+                <ul>
+                    <li>Diferente (FIRST)</li>
+                    <li>Normal</li>
+                    <li>Normal</li>
+                    <li>Normal</li>
+                    <li>Normal</li>
+                    <li>Diferente (LAST)</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-center">:focus</h2>
+                <p>Representa un elemento (como una entrada de formulario) que ha recibido el foco. Generalmente se
+                    activa cuando el usuario hace clic o toca un elemento.</p>
+                <input type="text" class="focus" placeholder="Campo disponible">
+                <br>
+                <br>
+                <input type="text" class="focus" placeholder="Campo disponible">
+                <br>
+                <br>
+                <input type="text" disabled placeholder="Campo no disponible">
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-center">:hover</h2>
+                <p>Coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no
+                    necesariamente lo activa. Generalmente se activa cuando el usuario se desplaza sobre un elemento con
+                    el cursor.</p>
+                <a href="#" class="boton">HOLA</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center">:valid</h2>
+                <p>La pseudoclase :valid de CSS representa cualquier elemento de tipo input u otro elemento del
+                    formulario cuyo contenido se valide satisfactoriamente. Esto permite que los campos válidos adopten
+                    fácilmente una apariencia que ayuda al usuario a confirmar que sus datos están formateados
+                    correctamente.</p>
+                <input type="email" name="" id="" class="valid" value="loqsea@gmail.com" placeholder="email">
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-center">:visited</h2>
+                <p>La pseudoclase :visited de CSS representa enlaces que el usuario ya ha visitado.</p>
+                <a href="#" class="visited">HOLA</a>
+                <br>
+                <a href="#" class="visited">HOLA</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
